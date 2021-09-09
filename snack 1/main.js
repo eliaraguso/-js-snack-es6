@@ -26,4 +26,6 @@ for (let i = 0; i < arrayBici.length; i++) {
     }   
 }
 
-console.log(biciLeggera.peso);
+const{nome,peso} = biciLeggera;
+
+console.log(`La bici più leggera è la bici ${nome} con il peso di ${peso} Kg`);
