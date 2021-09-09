@@ -4,6 +4,9 @@ Generare numeri random al posto degli 0 nelle proprietà:
 Punti fatti e falli subiti.
 Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console. */
 
+
+// creo un array di oggetti di squadre
+
 let squadre = [
     {
         "nome" : "Gamba Osaka",
@@ -33,7 +36,31 @@ let squadre = [
 ];
 
 
-let numeroCasuale = Math.floor(Math.random() * 100) + 1;
+// definisco una funzione per creare numeri casuali tra min e max
 
-console.log(numeroCasuale);
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
+  
+
+
+// creo un ciclo per attraversare l'array di squadre
+for (let i = 0; i < squadre.length; i++) {
+
+    // modifico i valori dei punti e dei falli con la funzione  appena crfealta
+    squadre[i]["puntiFatti"] = getRndInteger(1, 400);
+    squadre[i]["falliSubiti"] = getRndInteger(1, 100);
+
+}
+console.log(squadre);
+
+
+
+
+
+
+
+
+
 
