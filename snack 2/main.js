@@ -43,17 +43,34 @@ function getRndInteger(min, max) {
   }
 
   
+// definisco il nuovo array
+
+let nuovoArray = [];
+
 
 
 // creo un ciclo per attraversare l'array di squadre
 for (let i = 0; i < squadre.length; i++) {
 
-    // modifico i valori dei punti e dei falli con la funzione  appena crfealta
+    // modifico i valori dei punti e dei falli con la funzione  appena creata
     squadre[i]["puntiFatti"] = getRndInteger(1, 400);
     squadre[i]["falliSubiti"] = getRndInteger(1, 100);
 
+
+    // riempio il nuovo array solamente con il nome delle squadre e i falli subiti
+    nuovoArray.push(squadre[i]["nome"]);
+    nuovoArray.push(squadre[i]["falliSubiti"]);
+
+
+
+    
+    
 }
 console.log(squadre);
+
+console.log(nuovoArray);
+
+
 
 
 
